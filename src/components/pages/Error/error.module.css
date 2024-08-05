@@ -1,0 +1,11 @@
+.page-error {
+    color: #eee;
+    display: block;
+    font-size: 300px;
+    font-weight: 800;
+    line-height: 0.7;
+  }
+
+.error-section{
+    height: 600px;
+}

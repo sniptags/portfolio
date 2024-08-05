@@ -1,0 +1,12 @@
+@use '../../../styles/variables';
+
+.navbar{
+    font-family: 'Montserrat';
+}
+
+.nav-dark{
+    background-color: variables.$bg-dark-color !important;
+}
+.nav-light a, .nav-light label{
+    color: variables.$text-primary-light !important;
+}

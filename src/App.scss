@@ -1,0 +1,39 @@
+@use './styles/variables';
+
+.heading {
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: variables.$text-primary-font; ;
+}
+.heading-light-primary{
+    color : variables.$text-primary-light
+}
+.heading-dark-primary{
+    color : variables.$text-primary-dark
+}
+.heading > h1,
+.heading > h2 {
+    font-size: 30px;
+    text-transform: capitalize;
+    line-height: 46px;
+    font-weight: 300;
+}
+.heading > h1,
+.heading > h2,
+.heading > h4,
+.heading > p {
+    margin-bottom: 20px;
+}
+.border-right {
+    border-width: 0 1px 0 0;
+    border-color: #eee;
+    border-style: solid;
+  }
+
+.bg-dark{
+    background-color: variables.$bg-dark-color !important;
+}
+
+.bg-light-primary{
+    background-color: variables.$bg-light-color;
+}

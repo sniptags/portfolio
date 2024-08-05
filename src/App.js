@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Home from "./components/pages/Home/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import DarkThemeProvider from "./store/theme-provider";
+import homeLoader from "./store/loader/homeLoader";
+import Blogs from "./components/pages/Blogs/Blogs";
+import ErrorBoundary from "./components/pages/Error/ErrorBoundary";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        id:"home",
+        errorElement:<ErrorBoundary />,
+        children:[
+            {
+                path:"/",
+                root:true,
+                loader:homeLoader,
+                element: <Home />,
+            },
+            {
+                path: "/blogs",
+                id:"blogs",
+                element: < Blogs/>,
+            }
+        ]
+    },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+      <DarkThemeProvider>
+            <RouterProvider router={router}>
+            </RouterProvider>
+        </DarkThemeProvider>
+    );
 }
 
 export default App;
