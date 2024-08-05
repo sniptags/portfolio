@@ -5,6 +5,7 @@ import DarkThemeProvider from "./store/theme-provider";
 import homeLoader from "./store/loader/homeLoader";
 import Blogs from "./components/pages/Blogs/Blogs";
 import ErrorBoundary from "./components/pages/Error/ErrorBoundary";
+import ComingSoon from "./components/pages/ComingSoon/ComingSoon";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
                 path: "/blogs",
                 id:"blogs",
                 element: < Blogs/>,
+            },
+            {
+                path: "/projects",
+                id:"projects",
+                element: <ComingSoon/>,
             }
         ]
     },
